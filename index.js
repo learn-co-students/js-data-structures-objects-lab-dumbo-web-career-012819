@@ -1,1 +1,24 @@
 // Write your solution in this file!
+driver = {}
+
+function updateDriverWithKeyAndValue(driver, key, value) {
+  let newDriver = { ...driver};
+  newDriver[key] = value;
+  return newDriver;
+}
+
+function destructivelyUpdateDriverWithKeyAndValue(driver, key, value){
+  driver[key] = value;
+  return driver;
+}
+
+function deleteFromDriverByKey(driver, key, value) {
+  let newDriver = { ...driver};
+  delete newDriver[key];
+  return newDriver;
+}
+
+function destructivelyDeleteFromDriverByKey(driver, key, value) {
+  delete driver[key];
+  return driver;
+}
